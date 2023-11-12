@@ -280,7 +280,7 @@ void keyPressed(){
   if (key == 'd'){
     NAVIGATE = false;
     numObstacles = int(random(5, 15));
-    maxAgent = int(random(2, 20));
+    maxAgent = int(random(2, 15));
     placeRandomObstacles();
     placeRandomAgent();
     ArrayList<Agent> revAgentList = new ArrayList<Agent>();

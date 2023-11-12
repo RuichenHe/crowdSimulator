@@ -198,7 +198,7 @@ public class Agent {
   
   
   public float ttc(Agent a){
-    //http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter19_Guide_to_Anticipatory_Collision_Avoidance.pdf
+    //Reference:  http://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter19_Guide_to_Anticipatory_Collision_Avoidance.pdf
     float r = this.radius +  a.radius;
     Vec2 w = a.location.minus(this.location);
     float c = dot(w, w) - pow(r, 2);
