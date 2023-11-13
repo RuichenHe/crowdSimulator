@@ -386,55 +386,55 @@ int closestNode(Vec2 point){
 }
 
 void mousePressed(){
-  goalPos = new Vec2(mouseX, mouseY);
-  if (checkSelection(goalPos)){
-    println("inside obs");
-    obstacleChosen = true;
-    dragInit = goalPos;
-    switch (selectType){
-      case "Box":
-        initPosObs = boxTopLeftList[selectId];;
-        break;
-      case "Circle":
-        initPosObs = circlePos[selectId];
-        break;
-      default:
-        break;
-    }
+  //goalPos = new Vec2(mouseX, mouseY);
+  //if (checkSelection(goalPos)){
+  //  println("inside obs");
+  //  obstacleChosen = true;
+  //  dragInit = goalPos;
+  //  switch (selectType){
+  //    case "Box":
+  //      initPosObs = boxTopLeftList[selectId];;
+  //      break;
+  //    case "Circle":
+  //      initPosObs = circlePos[selectId];
+  //      break;
+  //    default:
+  //      break;
+  //  }
     
-  } else{
-    println("New Goal is",goalPos.x, goalPos.y);
-    runBFS(closestNode(startPos),closestNode(goalPos));
-    obstacleChosen = false;
-  }
+  //} else{
+  //  println("New Goal is",goalPos.x, goalPos.y);
+  //  runBFS(closestNode(startPos),closestNode(goalPos));
+  //  obstacleChosen = false;
+  //}
   
 }
 
 void mouseReleased(){
-  if (obstacleChosen){
-    obstacleChosen = false;
-    println("Obstacles released");
-  }
+  //if (obstacleChosen){
+  //  obstacleChosen = false;
+  //  println("Obstacles released");
+  //}
 }
 
 
 void mouseDragged(){
-  println(dragInit.x, dragInit.y);
-  if (obstacleChosen){
-    Vec2 currentLoc = new Vec2(mouseX, mouseY);
-    switch (selectType){
-      case "Box":
-        boxTopLeftList[selectId] = initPosObs.plus(currentLoc.minus(dragInit));
-        break;
-      case "Circle":
-        circlePos[selectId] = initPosObs.plus(currentLoc.minus(dragInit));
-        break;
-      default:
-        break;
-    }
-    buildPRM();
-    runBFS(closestNode(startPos),closestNode(goalPos));
-  }
+  //println(dragInit.x, dragInit.y);
+  //if (obstacleChosen){
+  //  Vec2 currentLoc = new Vec2(mouseX, mouseY);
+  //  switch (selectType){
+  //    case "Box":
+  //      boxTopLeftList[selectId] = initPosObs.plus(currentLoc.minus(dragInit));
+  //      break;
+  //    case "Circle":
+  //      circlePos[selectId] = initPosObs.plus(currentLoc.minus(dragInit));
+  //      break;
+  //    default:
+  //      break;
+  //  }
+  //  buildPRM();
+  //  runBFS(closestNode(startPos),closestNode(goalPos));
+  //}
 }
 
 
