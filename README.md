@@ -35,5 +35,17 @@ In the Demo3, the third mode is presented (by pressing `d`). This mode is an ext
 
 In the Demo4, the last mode is presented (by pressing `2`). This mode is another demonstration of anticipatory collision avoidance, by placing paired agents around a circle with same distance. 
 
+## Difficulties
+The most difficult part during the implementation is the management of different classes, including Agent, Obstacle, and PRM planner. In addition, it take me some time to figure out what should be the optimal way to present the behavior of anticipatory collision avoidance.
+
+# Future Work
+
+Due to the limit of time, only the basic PRM and TTC force is implemented. Future works include:
++ Current PRM is not optimal, cannot provide optimal path plan. In the future, several other optimal path planning algorithms should be considered.
++ TTC force can further been extended to c-TTC or other more advanced algorithms for better anticipatory collision avoidance.
+
+# Code
+The source code is available to download [here](https://github.com/RuichenHe/crowdSimulator/)
+
 
 
